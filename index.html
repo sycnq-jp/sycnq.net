@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>synq-bothost | DiscordでBotを操作</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+    header {
+      background-color: #2c2c2c;
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+    }
+    .logo {
+      height: 32px;
+      margin-right: 10px;
+    }
+    .sitename {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    nav {
+      margin-left: auto;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 14px;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p.lead {
+      color: #ccc;
+      margin-bottom: 25px;
+    }
+    section.plan {
+      background-color: #2e2e2e;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    section.plan h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    section.plan h2 img {
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 8px;
+    }
+    section.plan ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    section.plan ul li {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+    }
+    section.plan ul li img {
+      width: 1.2em;
+      height: 1.2em;
+      margin-right: 6px;
+    }
+    .free {
+      border-left: 5px solid #5bc0de;
+    }
+    .pro {
+      border-left: 5px solid #f39c12;
+    }
+    .btn-purchase {
+      display: inline-block;
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .btn-purchase:hover {
+      background-color: #45a049;
+    }
+    footer {
+      background-color: #2c2c2c;
+      text-align: center;
+      padding: 12px;
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 30px;
+    }
+    footer a {
+      color: #aaa;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" class="logo" alt="logo">
+    <div class="sitename">synq-bothost</div>
+    <nav>
+      <a href="#">ホーム</a>
+      <a href="#">機能</a>
+      <a href="#">価格</a>
+      <a href="#">サポート</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>WebでBotを簡単操作</h1>
+    <p class="lead">Discord Botのホスティングをもっとカンタンに。Webパネルで誰でも管理ができる、シンプルで強力なホスティングサービスです。</p>
+
+    <section class="plan free">
+      <h2>
+        <img src="images/free.svg" alt="Free icon">
+        Free プラン
+      </h2>
+      <ul>
+        <li><img src="images/bot.svg" alt="Bot icon">Bot数：1体まで</li>
+        <li><img src="images/memory.svg" alt="Memory icon">メモリ：最大 256MB</li>
+        <li><img src="images/cpu.svg" alt="CPU icon">CPU：共有（ベーシック性能）</li>
+        <li><img src="images/time.svg" alt="Time icon">稼働時間：1日最大6時間</li>
+        <li><img src="images/log.svg" alt="Log icon">ログ保存：24時間</li>
+        <li><img src="images/restart.svg" alt="Restart icon">自動再起動：なし</li>
+        <li><img src="images/upload.svg" alt="Upload icon">アップロード容量：20MB</li>
+        <li><img src="images/warning.svg" alt="Warning icon">商用利用：不可</li>
+      </ul>
+    </section>
+
+    <section class="plan pro">
+      <h2>
+        <img src="images/rocket.svg" alt="Rocket icon">
+        Pro プラン（¥500/月）
+      </h2>
+      <ul>
+        <li><img src="images/bot.svg" alt="Bot icon">Bot数：最大4体</li>
+        <li><img src="images/memory.svg" alt="Memory icon">メモリ：最大2GB / Bot</li>
+        <li><img src="images/cpu.svg" alt="CPU icon">CPU：優先割り当て（高速動作）</li>
+        <li><img src="images/time.svg" alt="Time icon">稼働時間：常時稼働</li>
+        <li><img src="images/log.svg" alt="Log icon">ログ保存：30日間</li>
+        <li><img src="images/restart.svg" alt="Restart icon">自動再起動：あり</li>
+        <li><img src="images/upload.svg" alt="Upload icon">アップロード容量：100MB / Bot</li>
+        <li><img src="images/check.svg" alt="Check icon">商用利用：OK</li>
+        <li><img src="images/webpanel.svg" alt="Web panel icon">Web管理パネル：付き</li>
+      </ul>
+    </section>
+
+    <a href="#" class="btn-purchase">
+      <img src="images/box.svg" alt="Box icon" style="width:1.2em; vertical-align:middle; margin-right:6px;">
+      サポートサーバーで購入する
+    </a>
+  </main>
+
+  <footer>
+    <p>© synq 2025 | All rights reserved.</p>
+    <a href="#">利用規約</a> | <a href="#">プライバシー</a>
+  </footer>
+
+</body>
+</html>
